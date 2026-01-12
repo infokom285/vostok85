@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Содержание учебника</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .menu-item {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .menu-item:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+        .block-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 25px 0 15px;
+        }
+        .close-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s;
+        }
+        .close-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+    <script>
+        function closePage() {
+            // Пытаемся закрыть окно
+            if(window.opener || window.history.length <= 1) {
+                window.close();
+            } else {
+                // Просто возвращаемся назад без подтверждения
+                window.history.back();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Содержание учебника</h1>
+        
+        <div class="block-title">БЛОК I. ЧИСЛА</div>
+        <div class="menu">
+            <div class="menu-item">
+                <a href="str003005.html">1. Натуральные числа</a>
+            </div>
+            <div class="menu-item">
+                <a href="str004005.html">2. Делимость</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">3. Дроби</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">4. Десятичные числа</a>
+            </div>
+        </div>
+        
+        <div class="block-title">БЛОК II. АЛГЕБРА</div>
+        <div class="menu">
+            <div class="menu-item">
+                <a href="str004005.html">5. Целые числа</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">6. Введение в алгебру</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">7. Прямая пропорциональность</a>
+            </div>
+        </div>
+        
+        <div class="block-title">БЛОК III. СТАТИСТИКА И ГЕОМЕТРИЯ</div>
+        <div class="menu">
+            <div class="menu-item">
+                <a href="str003005.html">8. Статистика</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">9. Прямые и углы</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">10. Многоугольники</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">11. Периметры и площади</a>
+            </div>
+            <div class="menu-item">
+                <a href="str003005.html">12. Окружность и круг</a>
+            </div>
+        </div>
+
+        <button class="close-button" onclick="closePage()">Закрыть страницу</button>
+    </div>
+</body>
+</html>

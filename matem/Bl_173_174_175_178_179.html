@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Числа и геометрические фигуры</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .exercise {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .print-btn, .back-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .print-btn:hover, .back-btn:hover {
+            background-color: #2980b9;
+        }
+        @media print {
+            .print-btn, .back-btn {
+                display: none;
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Кнопки управления (модуль) -->
+    <script>
+        function addNavigationButtons() {
+            const header = document.createElement('div');
+            header.innerHTML = '<button class="print-btn" onclick="window.print()">Печать</button>';
+            document.body.insertBefore(header, document.body.firstChild);
+
+            const footer = document.createElement('div');
+            footer.innerHTML = '<button class="back-btn" onclick="window.history.back()">Вернуться назад</button>';
+            document.body.appendChild(footer);
+        }
+        window.onload = addNavigationButtons;
+    </script>
+
+    <h1>Числа, геометрические фигуры и их свойства</h1>
+
+    <h2>1. Работа с числами и дробями</h2>
+
+    <div class="exercise">
+        <h3>Задание 1. Напишите два числа, удовлетворяющих каждому условию:</h3>
+        <p>a) Имеет 8 десятков тысяч и 4 сотни: \(\boxed{80\,400}\) и \(\boxed{80\,401}\)</p>
+        <p>b) Числитель равен 5: \(\boxed{\frac{5}{1}}\) и \(\boxed{\frac{5}{2}}\)</p>
+        <p>c) Дробная часть равна 19: \(\boxed{0.19}\) и \(\boxed{5.19}\)</p>
+        <p>d) Начинается с XLII (римское число 42): \(\boxed{42\,000}\) и \(\boxed{42\,100}\)</p>
+        <p>e) Заканчивается на IX (римское число 9): \(\boxed{19}\) и \(\boxed{29}\)</p>
+        <p>f) Числитель и знаменатель в сумме дают 7: \(\boxed{\frac{3}{4}}\) и \(\boxed{\frac{2}{5}}\)</p>
+        <p>g) Имеет 3 десятых и 7 тысячных: \(\boxed{0.307}\) и \(\boxed{5.307}\)</p>
+        <p>h) Это неправильная дробь, и члены в сумме дают 11: \(\boxed{\frac{7}{4}}\) и \(\boxed{\frac{9}{2}}\)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задание 2. Округлите до указанного порядка:</h3>
+        <p>a) До десятков:
+            \(529.307 \approx \boxed{530}\)
+            \(3\,555.888 \approx \boxed{3\,560}\)
+        </p>
+        <p>b) До тысяч:
+            \(3\,214.978 \approx \boxed{3\,000}\)
+            \(19\,406.388 \approx \boxed{19\,000}\)
+        </p>
+        <p>c) До единиц:
+            \(4.7 \approx \boxed{5}\)
+            \(5.28 \approx \boxed{5}\)
+            \(9.721 \approx \boxed{10}\)
+        </p>
+        <p>d) До десятых:
+            \(3.48 \approx \boxed{3.5}\)
+            \(6.056 \approx \boxed{6.1}\)
+            \(8.771 \approx \boxed{8.8}\)
+        </p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задание 3. Выразите как десятичную дробь или число:</h3>
+        <p>a) \(1.24 = \boxed{1.24}\)</p>
+        <p>b) \(6.7 = \boxed{6.7}\)</p>
+        <p>c) \(9.032 = \boxed{9.032}\)</p>
+        <p>d) \(\frac{19}{10} = \boxed{1.9}\)</p>
+        <p>e) \(\frac{37}{1000} = \boxed{0.037}\)</p>
+        <p>f) \(\frac{5}{100} = \boxed{0.05}\)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задание 4. Вычислите:</h3>
+        <p>a) \(\frac{9}{10} + \frac{4}{10} + \frac{5}{10} = \boxed{\frac{18}{10} = 1.8}\)</p>
+        <p>b) \(4.52 + 0.729 = \boxed{5.249}\)</p>
+        <p>c) \(8.06 \times 34.9 = \boxed{281.294}\)</p>
+        <p>d) \(\frac{25}{11} - 2 = \boxed{\frac{3}{11} \approx 0.2727}\)</p>
+        <p>e) \(9.8 - 2.666 = \boxed{7.134}\)</p>
+        <p>f) \(325.56 \div 6 = \boxed{54.26}\)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задание 5. Оцените эти операции:</h3>
+        <p>a) До десятых: \(18.29 + 35.174 \approx \boxed{53.5}\)</p>
+        <p>b) До сотых: \(7.685 + 22.13 \approx \boxed{29.82}\)</p>
+        <p>c) \(9.76 - 4.43 = \boxed{5.33}\)</p>
+        <p>d) \(3.827 \times 4 = \boxed{15.308}\)</p>
+        <p>e) \(4.178 - 1.82 = \boxed{2.358}\)</p>
+        <p>f) \(8 \times 0.753 = \boxed{6.024}\)</p>
+    </div>
+
+    <h2>2. Практические задачи</h2>
+
+    <div class="exercise">
+        <h3>Задача 6. Распределение рабочего времени</h3>
+        <p>В кооперативе из 200 человек собрали оливки. 70% начали работу в 5 утра, 15% — в 7 утра, а остальные — в 9 утра. Сколько человек начали работу в 9 утра?</p>
+        <p><strong>Решение:</strong></p>
+        <p>1. 70% от 200: \(200 \times 0.70 = 140\) человек</p>
+        <p>2. 15% от 200: \(200 \times 0.15 = 30\) человек</p>
+        <p>3. Остальные: \(200 - 140 - 30 = \boxed{30}\) человек</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задача 7. Сбор урожая</h3>
+        <p>Урожай собирают на площади 30 000 м². На этой неделе собирают одну пятую часть, а следующая неделя — три десятых. Сколько квадратных метров останется для сбора?</p>
+        <p><strong>Решение:</strong></p>
+        <p>1. На этой неделе: \(30\,000 \times \frac{1}{5} = 6\,000\) м²</p>
+        <p>2. На следующей неделе: \(30\,000 \times \frac{3}{10} = 9\,000\) м²</p>
+        <p>3. Всего собрано: \(6\,000 + 9\,000 = 15\,000\) м²</p>
+        <p>4. Осталось: \(30\,000 - 15\,000 = \boxed{15\,000}\) м²</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задача 8. Распределение доходов</h3>
+        <p>Прошлый год при продаже масла было получено 4 миллиона евро, из которых 40 000 евро были затратами. Сколько денег получил каждый из 200 человек в кооперативе?</p>
+        <p><strong>Решение:</strong></p>
+        <p>1. Чистая прибыль: \(4\,000\,000 - 40\,000 = 3\,960\,000\) €</p>
+        <p>2. На каждого человека: \(3\,960\,000 \div 200 = \boxed{19\,800}\) €</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задача 9. Расходы на питание</h3>
+        <p>Кооператив платит 3,80 € за человека на ежедневное питание и 1,50 € за обед. Сколько всего тратится каждый день на 200 человек?</p>
+        <p><strong>Решение:</strong></p>
+        <p>1. На питание: \(3.80 \times 200 = 760\) €</p>
+        <p>2. На обед: \(1.50 \times 200 = 300\) €</p>
+        <p>3. Всего: \(760 + 300 = \boxed{1\,060}\) €</p>
+    </div>
+
+    <h2>3. Геометрические фигуры и их свойства</h2>
+
+    <div class="exercise">
+        <h3>Треугольники: основание и высота</h3>
+        <p><strong>Определение:</strong> Основанием треугольника может быть любая его сторона. Высота треугольника — это перпендикулярный отрезок к одной из сторон или ее продолжению, проведенный из противоположной вершины.</p>
+
+        <h4>Практические задания:</h4>
+        <p>1. Объясните, сколько оснований имеет треугольник (три). Нарисуйте:</p>
+        <ul>
+            <li>Остроугольный треугольник со всеми высотами внутри</li>
+            <li>Прямоугольный треугольник, где две высоты совпадают с катетами</li>
+            <li>Тупоугольный треугольник, где две высоты проходят вне треугольника</li>
+        </ul>
+    </div>
+
+    <div class="exercise">
+        <h3>Параллелограммы: основание и высота</h3>
+        <p><strong>Определение:</strong> Основанием параллелограмма может быть любая его сторона. Высота — это перпендикулярный отрезок, проведенный от одной стороны к противоположной стороне.</p>
+
+        <h4>Практические задания:</h4>
+        <p>1. Нарисуйте параллелограмм ABCD и проведите высоту к стороне AB.</p>
+        <p>2. Нарисуйте параллелограммы с разными соотношениями сторон и высот.</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Площадь фигур</h3>
+        <p><strong>Формулы:</strong></p>
+        <ul>
+            <li>Квадрат: \(A = c^2\)</li>
+            <li>Прямоугольник: \(A = b \times h\)</li>
+            <li>Ромб: \(A = b \times h\)</li>
+        </ul>
+
+        <h4>Примеры вычислений:</h4>
+        <p>1. Ромб с основанием 18 см и высотой 2 дм (20 см):</p>
+        <p>\(A = 18 \times 20 = \boxed{360}\) см²</p>
+        <p>2. Ромб с высотой 25 дм и основанием, которое вдвое больше высоты (50 дм):</p>
+        <p>\(A = 50 \times 25 = \boxed{1\,250}\) дм²</p>
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

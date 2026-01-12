@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Площадь треугольника и практические задачи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .exercise {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <!-- Модуль навигации -->
+    <script>
+        function addNavigationButtons() {
+            const header = document.createElement('div');
+            header.innerHTML = '<button class="print-btn" onclick="window.print()">Печать</button>';
+            document.body.insertBefore(header, document.body.firstChild);
+
+            const footer = document.createElement('div');
+            footer.innerHTML = '<button class="back-btn" onclick="window.history.back()">Вернуться назад</button>';
+            document.body.appendChild(footer);
+
+            // Добавляем стили для кнопок
+            const style = document.createElement('style');
+            style.textContent = `
+                .print-btn, .back-btn {
+                    display: inline-block;
+                    padding: 10px 15px;
+                    margin: 10px 0;
+                    background-color: #3498db;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .print-btn:hover, .back-btn:hover {
+                    background-color: #2980b9;
+                }
+                @media print {
+                    .print-btn, .back-btn {
+                        display: none;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        window.onload = addNavigationButtons;
+    </script>
+</head>
+<body>
+
+    <h1>Площадь треугольника и практические задачи</h1>
+
+    <h2>1. Площадь треугольника</h2>
+
+    <div class="exercise">
+        <h3>Исследование площади треугольника</h3>
+        <p><strong>Формула площади треугольника:</strong></p>
+        <p>\[ A = \frac{b \times h}{2} \]</p>
+        <p>где \( b \) - основание, \( h \) - высота.</p>
+
+        <h4>Практическое задание:</h4>
+        <p>1. Нарисуйте два одинаковых треугольника с основанием 8 см и высотой 4 см.</p>
+        <p>2. Соедините их по сторонам одинакового цвета.</p>
+        <p>3. Получился параллелограмм площадью \(\boxed{32 \text{ см}^2}\)</p>
+        <p>4. Площадь одного треугольника: \(\boxed{16 \text{ см}^2}\)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Пример вычисления</h3>
+        <p>Вычислите площадь треугольника с основанием 36 см и высотой 15 см:</p>
+        <p>\[ A = \frac{36 \times 15}{2} = \boxed{270 \text{ см}^2} \]</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задания на вычисление площади</h3>
+        <p>1. Нарисуйте треугольники с площадями:</p>
+        <ul>
+            <li>12 см² (например, b=6 см, h=4 см)</li>
+            <li>8 см² (например, b=4 см, h=4 см)</li>
+            <li>1 дм² = 100 см² (например, b=20 см, h=10 см)</li>
+        </ul>
+        <p>2. Все треугольники с основанием 2 м и высотой 4 м имеют площадь:</p>
+        <p>\[ A = \frac{2 \times 4}{2} = \boxed{4 \text{ м}^2} \]</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Проверка утверждений</h3>
+        <p>Какие утверждения верны?</p>
+        <ul>
+            <li>❌ Треугольник всегда имеет площадь больше 1 см² (неверно, может быть меньше)</li>
+            <li>✅ Площадь прямоугольного треугольника можно вычислить как половину произведения катетов</li>
+            <li>❌ Два треугольника с одинаковой площадью равны (неверно, могут быть разные формы)</li>
+        </ul>
+    </div>
+
+    <h2>2. Устный счет</h2>
+
+    <div class="exercise">
+        <h3>Вычислите половину чисел:</h3>
+        <table>
+            <tr>
+                <td>42 ÷ 2 = \(\boxed{21}\)</td>
+                <td>68 ÷ 2 = \(\boxed{34}\)</td>
+            </tr>
+            <tr>
+                <td>204 ÷ 2 = \(\boxed{102}\)</td>
+                <td>880 ÷ 2 = \(\boxed{440}\)</td>
+            </tr>
+            <tr>
+                <td>842 ÷ 2 = \(\boxed{421}\)</td>
+                <td>64 ÷ 2 = \(\boxed{32}\)</td>
+            </tr>
+            <tr>
+                <td>88 ÷ 2 = \(\boxed{44}\)</td>
+                <td>422 ÷ 2 = \(\boxed{211}\)</td>
+            </tr>
+            <tr>
+                <td>462 ÷ 2 = \(\boxed{231}\)</td>
+                <td>86 ÷ 2 = \(\boxed{43}\)</td>
+            </tr>
+            <tr>
+                <td>46 ÷ 2 = \(\boxed{23}\)</td>
+                <td>806 ÷ 2 = \(\boxed{403}\)</td>
+            </tr>
+            <tr>
+                <td>646 ÷ 2 = \(\boxed{323}\)</td>
+                <td></td>
+            </tr>
+        </table>
+        <p>Запишите 243 и 401 как половину чисел:</p>
+        <p>243 = \(\boxed{486}\) ÷ 2</p>
+        <p>401 = \(\boxed{802}\) ÷ 2</p>
+    </div>
+
+    <h2>3. Упорядочивание чисел и вычисления</h2>
+
+    <div class="exercise">
+        <h3>Упорядочьте числа от меньшего к большему:</h3>
+        <p>1. \( 3.809.675 \), \( 38.090.145 \), \( 38.100.120 \), \( 380.090.142 \)</p>
+        <p>2. \( 0.35 \), \( \frac{36}{100} \), \( \frac{4}{10} \), \( \frac{7}{10} \), \( 1.16 \)</p>
+        <p>3. \( 5.994 \), \( 6 \), \( 6.7 \), \( 6.79 \), \( 6.712 \)</p>
+        <p>4. \( \frac{11}{9} \), \( \frac{11}{5} \), \( \frac{11}{3} \), \( \frac{11}{2} \)</p>
+        <p>5. \( 0.008 \), \( 0.06 \), \( 0.073 \), \( 0.09 \), \( 0.91 \)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Вычислите:</h3>
+        <p>1. \( 25.365 ÷ 104 ≈ \boxed{243.894} \)</p>
+        <p>2. \( 3.6 × 2.4 + 4.65 ÷ 5 = 8.64 + 0.93 = \boxed{9.57} \)</p>
+        <p>3. \( \frac{7}{8} + \frac{5}{8} - \frac{3}{8} = \frac{9}{8} = \boxed{1.125} \)</p>
+        <p>4. \( 9 - (2.8 + 2.7 × 1.25) = 9 - (2.8 + 3.375) = \boxed{2.825} \)</p>
+    </div>
+
+    <h2>4. Практические задачи</h2>
+
+    <div class="exercise">
+        <h3>Задача 1. Школьные компьютеры</h3>
+        <p>Бюджет: 30 000 €</p>
+        <p>1. 30% на экраны: \( 30\,000 × 0.30 = \boxed{9\,000} \) €</p>
+        <p>2. 5 компьютеров: пусть цена одного \( x \) €</p>
+        <p>3. Остаток на клавиатуры и мыши: \( 30\,000 - 9\,000 - 5x \)</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задача 2. Покупка компьютеров</h3>
+        <p>6 компьютеров модели A по 375,99 €: \( 6 × 375,99 = \boxed{2\,255,94} \) €</p>
+        <p>5 компьютеров модели B по 345,99 €: \( 5 × 345,99 = \boxed{1\,729,95} \) €</p>
+        <p>Общая стоимость: \( 2\,255,94 + 1\,729,95 = \boxed{3\,985,89} \) €</p>
+        <p>Разница: \( 2\,255,94 - 1\,729,95 = \boxed{525,99} \) €</p>
+    </div>
+
+    <div class="exercise">
+        <h3>Задача 3. Парковка</h3>
+        <p>1. Автомобилей припарковано: \( 426 - 82 = \boxed{344} \)</p>
+        <p>2. Мотоциклов припарковано: \( 180 - 27 = \boxed{153} \)</p>
+        <p>3. Новых автомобилей: \( 28 × 2 = 56 \), всего: \( 344 + 56 + 28 = \boxed{428} \)</p>
+        <p>4. Длина забора: \( 2 × (170 + 80) - 4 = \boxed{496} \) м</p>
+    </div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
