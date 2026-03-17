@@ -1,199 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="favicon_ivb.ico?v=2" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon_ivb.ico?v=2" type="image/x-icon">
+    <title>Математика онлайн в Аликанте | Легкое обучение</title>
 
-  <title>Математика онлайн в Аликанте | Занятия для школьников в Испании</title>
+    <style>
+        :root {
+            --primary-color: #4A90E2; /* Приятный голубой */
+            --bg-color: #f0f7ff;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-main: #2C3E50;
+            --accent: #FFD700; /* Солнечный желтый для Аликанте */
+        }
 
-  <meta name="description" content="Репетитор по математике онлайн для школьников в Аликанте и по всей Испании. Подготовка к экзаменам, помощь с домашним заданием. Записывайтесь на пробный урок!" />
+        * { box-sizing: border-box; }
 
-  <meta name="keywords" content="математика онлайн Аликанте, репетитор математика Испания, школьная математика онлайн, уроки математики для детей Аликанте, помощь по математике школьникам" />
+        body, html {
+            margin: 0; padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            color: var(--text-main);
+            min-height: 100%;
+        }
 
-  <meta property="og:title" content="Математика онлайн для школьников в Аликанте" />
-  <meta property="og:description" content="Индивидуальные занятия по математике не выходя из дома. Испания, Аликанте. #математика #Аликанте #репетитор #Испания #Alicante #matematicas" />
-  <meta property="og:image" content="img/a1a.png" /> <style>
-    /* Адаптивная верстка */
+        /* Светлый фон вместо тяжелой картинки */
+        .page-wrapper {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        .portal-title {
+            text-align: center;
+            font-size: clamp(24px, 5vw, 42px);
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
 
-    .it-image {
-      width: 100%;
-      height: 100vh;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
+        /* Сетка баннеров */
+        .banner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
 
-    .overlay {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      padding: 20px 10px;
-    }
+        .banner-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
 
-    .portal-title {
-      text-align: center;
-      margin: 0 0 20px 0;
-      font-size: 35px;
-      color: #003366;
-      background-color: transparent;
-      padding: 10px;
-    }
+        .banner-grid img:hover {
+            transform: translateY(-5px);
+        }
 
-    .menu ul {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      max-width: 900px; /* Уменьшено для лучшего размещения 3 элементов в строке */
-      background-color: transparent;
-    }
+        /* Сетка меню */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-    .menu li {
-      flex: 0 0 calc(33.333% - 20px); /* 3 колонки в строке */
-      text-align: center;
-      position: relative;
-      min-width: 250px; /* Минимальная ширина элемента */
-    }
+        .card-item {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-    .menu a {
-      text-decoration: none;
-      font-size: 18px;
-      color: #333;
-      padding: 15px 10px;
-      display: block;
-      background-color: rgba(208, 240, 255, 0.8);
-      border: 1px solid #333;
-      border-radius: 5px;
-      transition: all 0.3s;
-      height: 100%;
-    }
+        .card-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(74, 144, 226, 0.15);
+            border-color: var(--primary-color);
+        }
 
-    .menu a:hover {
-      /* background-color: rgba(245, 245, 100, 0.6);  */
-	  /* background-color: rgba(144, 238, 144, 0.8); /* LightGreen с прозрачностью Мягкий светло-зеленый:*/
-      /* background-color: rgba(152, 251, 152, 0.8); /* PaleGreen с прозрачностью Свежий светло-зеленый:*/
-      /* background-color: rgba(127, 255, 0, 0.8);   /* Chartreuse с прозрачностью Яркий светло-зеленый:*/
-      /* background-color: rgba(189, 252, 201, 0.8);    /* Мятный светло-зеленый:*/
-	  background-color: rgba(255, 255, 200, 0.8); /* Бледно-желтый */
-      transform: translateY(-3px);
-    }
+        .card-link {
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
 
-    /* Стили для всплывающих подсказок */
-    .tooltip {
-      visibility: hidden;
-      width: 220px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      border-radius: 8px;
-      padding: 12px;
-      position: absolute;
-      z-index: 10;
-      bottom: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      font-size: 14px;
-      line-height: 1.4;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+        }
 
-    .tooltip::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -8px;
-      border-width: 8px;
-      border-style: solid;
-      border-color: #333 transparent transparent transparent;
-    }
+        .card-desc {
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+            line-height: 1.5;
+        }
 
-    .menu li:hover .tooltip {
-      visibility: visible;
-      opacity: 0.95;
-    }
+        /* Индикатор сложности или класса (условно) */
+        .badge {
+            background: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
 
-    @media (max-width: 900px) {
-      .menu li {
-        flex: 0 0 calc(50% - 15px); /* 2 колонки на планшетах */
-      }
-    }
-
-    @media (max-width: 600px) {
-      .portal-title {
-        font-size: 28px;
-      }
-      
-      .menu li {
-        flex: 0 0 100%; /* 1 колонка на мобильных */
-        min-width: auto;
-      }
-      
-      .tooltip {
-        width: 180px;
-        font-size: 13px;
-      }
-    }
-  </style>
+        /* Адаптивность для мобилок */
+        @media (max-width: 600px) {
+            .page-wrapper { padding: 20px 15px; }
+            .card-item { min-height: 120px; }
+        }
+    </style>
 </head>
 
 <body>
-  <img src="domenico.jpg" alt="IT Theme" class="it-image" />
+    <div class="page-wrapper">
+        <h1 class="portal-title">Математика Онлайн</h1>
+        <p class="subtitle">Индивидуальные занятия для школьников в Испании</p>
 
-  <div class="overlay">
-    <h1 class="portal-title">Portal of Useful Programs</h1>
+        <div class="banner-grid">
+            <img src="a3a.png" alt="Урок 1">
+            <img src="a4a.png" alt="Урок 2">
+            <img src="a1a.png" alt="Урок 3">
+        </div>
 
-    <nav class="menu">
-      <ul>
-        <!-- Первая строка - 3 элемента -->
-<li>
-  <img src="a3a.png" alt="Рекламный баннер" style="max-width: 100%; height: auto; display: block;">
-</li>
-<li>
-  <img src="a4a.png" alt="Рекламный баннер" style="max-width: 100%; height: auto; display: block;">
-</li>
-<li>
-  <img src="a1a.png" alt="Рекламный баннер" style="max-width: 100%; height: auto; display: block;">
-</li>
+        <nav class="menu-grid">
+            
+            <div class="card-item">
+                <a href="matem/str001002.html" class="card-link">
+                    <span class="badge">ESO 1</span>
+                    <span class="card-title">5-6 класс</span>
+                    <span class="card-desc">Базовый курс математики: дроби, основы геометрии и логики.</span>
+                </a>
+            </div>
 
-        
-        <!-- Вторая строка - 3 элемента -->
-        <li>
-          <a href="matem/str001002.html">Математика ESO1 5-6 класс</a>
-          <div class="tooltip">Курс математики для 5-6 классов</div>
-        </li>
-        <li>
-		  <a href="matem/str001003.html">Математика Segundo trimestre 5 класс</a>
-          <div class="tooltip">Курс математики для 5 классов</div>
-        </li>
-        <li>
-    	  <a href="matem/str001004.html">Математика Segundo trimestre 3 класс</a>
-          <div class="tooltip">Курс математики для 3 классов</div>
-        </li>
-      </ul>
-    </nav>
-  </div>
+            <div class="card-item">
+                <a href="matem/str001003.html" class="card-link">
+                    <span class="badge">Trimestre 2</span>
+                    <span class="card-title">5 класс</span>
+                    <span class="card-desc">Углубленное изучение тем второго триместра испанской школы.</span>
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="matem/str001004.html" class="card-link">
+                    <span class="badge">Trimestre 2</span>
+                    <span class="card-title">3 класс</span>
+                    <span class="card-desc">Интересная математика для младших классов: счет и задачи.</span>
+                </a>
+            </div>
+
+        </nav>
+    </div>
 </body>
-
 </html>
